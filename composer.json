@@ -1,0 +1,19 @@
+{
+    "name": "filipponik/laravel-translate-analyzer",
+    "description": "Translating keys analyzer package for laravel",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Filipponik\\LaravelTranslateAnalyzer\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.1",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpmd/phpmd": "^2.13"
+    }
+}
