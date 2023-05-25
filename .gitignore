@@ -18,3 +18,4 @@ yarn-error.log
 /storage/
 /.docker
 auth.json
+composer.lock
