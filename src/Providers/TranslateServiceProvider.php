@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Filipponik\LaravelTranslateAnalyzer\Providers;
 
-use Filipponik\LaravelTranslateAnalyzer\Console\Commands\FillTransactionFilesCommand;
+use Filipponik\LaravelTranslateAnalyzer\Console\Commands\CheckDuplicatesCommand;
+use Filipponik\LaravelTranslateAnalyzer\Console\Commands\FillFilesCommand;
 use Illuminate\Support\ServiceProvider;
 
 class TranslateServiceProvider extends ServiceProvider
@@ -16,7 +17,8 @@ class TranslateServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->commands([
-            FillTransactionFilesCommand::class
+            CheckDuplicatesCommand::class,
+            FillFilesCommand::class,
         ]);
     }
 }

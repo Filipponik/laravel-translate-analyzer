@@ -9,7 +9,9 @@
     },
     "require": {
         "php": "^7.4|^8.0",
-        "ext-mbstring": "*"
+        "laravel/framework": "^8.0|^9.0|^10.0",
+        "ext-mbstring": "*",
+        "filipponik/translate-analyzer": "^0.0.2"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.1",

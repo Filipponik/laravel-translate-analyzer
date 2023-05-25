@@ -7,7 +7,7 @@ namespace Filipponik\LaravelTranslateAnalyzer\Console\Commands;
 use Filipponik\TranslateAnalyzer\Analyzer;
 use Illuminate\Console\Command;
 
-class FillTransactionFilesCommand extends Command
+class FillFilesCommand extends Command
 {
     protected $signature = 'translate:fill-files';
 
