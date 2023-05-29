@@ -15,23 +15,23 @@ class FillFilesCommand extends Command
 
     public function handle(): int
     {
-        $languages = explode(' ', $this->ask('Select languages to fill (Example: en es ch)'));
+        $languages = explode(' ', $this->ask('Select languages to fill with space as separator (Example: en es ch)'));
         $versionToUse = $this->choice('Select Laravel version', ['8 and before', '9 and above']);
 
         $analyzer = new Analyzer();
         $analyzer
-            ->setDirectoryPath(base_path())
-            ->setSuffix('php')
+            ->directory(base_path())
+            ->suffix('php')
             ->analyze('app');
 
         if ($versionToUse === '8 and before') {
             $analyzer->toLaravel8AndBefore($languages);
-
-            $this->info('Files written successfully to '. base_path('/resources/lang/'). ' directory');
+            $dir = base_path('/resources/lang/');
         } else {
             $analyzer->toLaravel9AndAbove($languages);
-            $this->info('Files written successfully to '. base_path('/lang/'). ' directory');
+            $dir = base_path('/lang/');
         }
+        $this->info("Files written successfully to $dir");
 
         return self::SUCCESS;
     }
